@@ -1,0 +1,9 @@
+<localeConfig>
+<!--  Folder path  -->
+<localePath>locale/</localePath>
+<!--  Default language  -->
+<language>en-US</language>
+<localeFiles>
+<en-US>en-US.xml</en-US>
+</localeFiles>
+</localeConfig>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7 no-mqs"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8 no-mqs"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9 no-mqs"> <![endif]-->
+<!--[if IE 9]>    <html class="lt-ie10 mqs" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class=mqs lang=en>
+<!--<![endif]-->
+
+<head>
+    <meta charset=utf-8>
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <title>Barclays Code Playground</title>
+    <meta name=viewport content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
+    <meta name=apple-mobile-web-app-capable content=yes>
+    <!-- Facebook -->
+    <meta property=og:title content="Barclays Code Playground">
+    <meta property=og:site_name content="Barclays Code Playground">
+    <meta property=og:url content="http://barclayscodeplayground.co.uk">
+    <meta property=og:description content="Paint a monster, fly a rocket man or make a dinosaur dance, in the Barclays Code Playground">
+    <meta property=og:image content="http://barclayscodeplayground.co.uk/fathersday/images/share-thumb.png">
+    <!-- Twitter -->
+    
+    <link rel=icon href="/favicon.ico" type=image/x-icon>
+    <link rel="shortcut icon" href="/images/77664adc.favicon.png" type=image/png>
+    <link rel=stylesheet href="styles/ed6fea5f.application.css">
+    <script src="bower_components/modernizr/modernizr.js"></script>
+
+    <body>
+        <!-- IE Banner -->
+        <div class=ie-banner><img src="images/657b0638.dance-dino.png" class=ie-banner__img alt="dancing dinosaur">
+            <div class=ie-banner__copy>
+                <p class=margin-bottom-28><span class=blue>&gt;Barclays Code Playground does not support this browser.</span></p>
+                <p><span class=pink>&gt;For best results, please upgrade to the latest version.</span></p>
+            </div>
+        </div>
+        <main role=main>
+            <div class=reader-only role=contentinfo>Hello and welcome to Barclays Code Playground, a fun way to play with computer code. This experience is designed to be visual and tactile. It may not so well work using older browsers or text readers. We care about making sure our pages are accessible to all, so if you have any problems using the site, we'd love to hear from you. Please drop us an email at codeplayground@barclayscorp.com For more information on our policies, please visit <a href=http://www.barclays.com/accessibility>www.barclays.com/accessibility</a></div>
+            <!-- Playground View -->
+            <div id=playground class="playground playground--hidden"></div>
+            <div id=playground-reader class=reader-only aria-live=assertive></div>
+            <!-- Intro View -->
+            <div id=intro class="intro data-cloak">
+                <div class=intro__inner data-html=true>{{introText}}</div>
+            </div>
+            <!-- Editor View -->
+            <div id=editor class="editor editor--hidden data-cloak">
+                <div class=editor__inner>
+                    <h1 class=editor__header>{{playthingName}}</h1><button class="button editor__btn editor__btn--close" data-click=closeBtn_onClick()>{{__('ui.label_close')}}</button>
+                    <h1 class=editor__function-header>{{functionName}}</h1>
+                    <ul class=editor__code>
+                        <li data-repeat="property in editableProperties" class=editor__code-item>
+                            <div data-hide={{property.hide}}><span class=editor__code-comment>// {{property.description}}</span> <span class=editor__code-label>this.{{property.name}} <span class=editor__code-eq>=</span></span><input size={{property.size}} data-property={{property.name}} data-type={{property.type}} class=editor__code-input value={{property.value}} data-input=input_onInput()><span class=editor__code-label>;</span></div>
+                        </li>
+                    </ul>
+                    <h1 class=editor__function-header>{{__('editor.label_bracket')}}</h1>
+                    <div class=editor__btns><button class="button editor__btn editor__btn--run" data-click=runBtn_onClick()>{{__('editor.label_apply')}}</button> <button class="button editor__btn editor__btn--reset" data-click=resetBtn_onClick()>{{__('editor.label_reset')}}</button></div>
+                </div>
+            </div>
+            <!-- Confirm Reset View -->
+            <div id=confirm-reset class="confirm-reset editor editor--hidden data-cloak">
+                <div class=editor__inner><button class="button editor__btn editor__btn--close" data-click=closeBtnOnClick()>{{__('ui.label_close')}}</button>
+                    <h1 class=editor__function-header><br><br>{{__('reset.label_heading')}}<br></h1>
+                    <div class=editor__btns><button class="button editor__btn editor__btn--cancel" data-click=cancelBtnOnClick()>{{__('reset.label_cancel')}}</button> <button class="button editor__btn editor__btn--reset" data-click=confirmBtnOnClick()>{{__('reset.label_reset')}}</button></div>
+                </div>
+            </div>
+            <!-- Info View -->
+            <div id=info class="info info--hidden data-cloak">
+                <div class=info__bg></div>
+                <div class=info__inner>
+                    <ul class=info__nav role=tablist>
+                        <li role=tab data-repeat="section in navSections" class=info__nav-item><button type=button id=infoTab{{section.id}} class="info__nav-btn {{isSelected($index)}}" data-click=navItem_onClick($index)><span>{{section.title}}</span></button></li>
+                    </ul><button class="button button--pink info__btn info__btn--close" data-click=closeBtn_onClick()>{{__('ui.label_close')}}</button>
+                    <div class=info__main>
+                        <div aria-labelledby=infoTab{{sectionId}} role=tabpanel class=info__body data-html=true data-section-title={{sectionTitle}}>{{sectionBody}}</div>
+                    </div>
+                    <ul class=info__footer role=tablist>
+                        <li class=info__footer-item><span class=blue>© Barclays</span></li>
+                        <li role=tab data-repeat="section in footerSections" class=info__footer-item><button button=button id=infoTab{{id}} class="info__footer-btn {{section.color}}" data-click=footerItem_onClick($index)>{{section.title}}</button></li>
+                        <li class=info__footer-item><a class="info__footer-btn orange" href=http://www.barclays.co.uk/ImportantInformation/Privacypolicy/P1242557966945 target=_blank>Privacy policy</a></li>
+                        <li class=info__footer-item><a class="info__footer-btn blue" href=http://barclays.co.uk target=_blank data-event-id=barclays_web>barclays.co.uk</a></li>
+                        <li class=info__footer-item><button type=button class="info__footer-btn green" data-click=toggleContrast()>contrast: {{contrast}}</button></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Loader View -->
+            <div id=loader class=loader aria-hidden=true>&gt; coding &lt;</div>
+            <!-- FWA -->
+            <!-- <a class="fwa-badge" href="http://www.thefwa.com/site/barclays-code-playground" target="_blank" data-event-id="fwa_badge"></a> -->
+            <!-- Cookie View -->
+            <div id=cookie class="cookie cookie--hidden data-cloak" data-html=true>{{__('cookie.body')}}</div>
+        </main>
+       
+        <!--[if gt IE 8]><!-->
+        <script src=scripts/9b233209.CodePlayground.js></script>
+        <!--<![endif]-->
+       

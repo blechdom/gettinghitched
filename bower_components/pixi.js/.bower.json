@@ -1,0 +1,24 @@
+{
+  "name": "pixi.js",
+  "version": "2.1.0",
+  "main": "bin/pixi.dev.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test"
+  ],
+  "dependencies": {},
+  "devDependencies": {},
+  "homepage": "https://github.com/GoodBoyDigital/pixi.js",
+  "_release": "2.1.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.1.0",
+    "commit": "cfe3447e9213134867c39fc963eb02ed05ba413c"
+  },
+  "_source": "https://github.com/GoodBoyDigital/pixi.js.git",
+  "_target": "v2.1.0",
+  "_originalSource": "pixi.js",
+  "_direct": true
+}

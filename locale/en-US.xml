@@ -1,0 +1,126 @@
+<dictionary>
+<url>http://kevyb.com/gettinghitched</url>
+<share>
+<text>
+
+</text>
+<facebook>https://www.facebook.com/sharer/sharer.php?</facebook>
+<twitter>https://twitter.com/share?</twitter>
+</share>
+<ui>
+<label_close>
+<![CDATA[ close ]]>
+</label_close>
+</ui>
+<cookie>
+<body>
+<![CDATA[
+We can put more information here, but it only happens when people need to accept cookies. <button class="cookie__btn-accept">close</button>
+]]>
+</body>
+</cookie>
+<loader>
+<label_loading>
+<![CDATA[ > coding < ]]>
+</label_loading>
+</loader>
+<intro>
+<text>
+<![CDATA[
+<span class="intro__text intro__text--pink">You are<br/></span><span class="intro__text intro__text--blue">>totally<br/>>invited<br/>>to the wedding of<br/></span><span class="intro__text intro__text--green">>^1000<br/>><br/>><br/></span><span class="intro__text intro__text--green">>Kristin Erickson<br/>>and<br/>>Matthew Galvin</span>
+]]>
+</text>
+</intro>
+<editor>
+<label_function>
+<![CDATA[ var __playthingName__ =function(){ ]]>
+</label_function>
+<label_apply>
+<![CDATA[ > apply < ]]>
+</label_apply>
+<label_reset>
+<![CDATA[ > reset < ]]>
+</label_reset>
+<label_bracket>
+<![CDATA[ } ]]>
+</label_bracket>
+</editor>
+<reset>
+<label_heading>
+<![CDATA[ Are you sure you want to reset? ]]>
+</label_heading>
+<label_cancel>
+<![CDATA[ > cancel < ]]>
+</label_cancel>
+<label_reset>
+<![CDATA[ > reset < ]]>
+</label_reset>
+</reset>
+<info>
+<booking_url>
+<![CDATA[ http://www.barclays.co.uk/codeplayground ]]>
+</booking_url>
+<section>
+<title>Barclays and coding</title>
+<in_nav>true</in_nav>
+<id>1</id>
+<body>
+<![CDATA[
+<p> <span class="pink"><span aria-hidden="true">&gt;Coding*s</span><span class="ro">Coding's</span> going to be<br/> <span aria-hidden="true">t@king</span><span class="ro">taking</span> us all <span aria-hidden="true">somew#ere</span><span class="ro">somewhere</span> new.</span> </p> <p class="shifted"> <span class="lightgreen">And the people <span aria-hidden="true">who*ll</span><span class="ro">who'll</span> be taking us there<br/> are the kids of <span aria-hidden="true">tod@y.</span><span class="ro">today</span></span> </p> <p> <span class="blue">Which is <span aria-hidden="true">w#y</span><span class="ro">why</span>, with our trained Digital Eagles,<br/> <span aria-hidden="true">we*re</span><span class="ro">we're</span> encouraging as <span aria-hidden="true">m@ny</span><span class="ro">many</span> young people<br/> <span class="unshifted">as possible to have a go.</span></span> </p> <p> <span class="orange"><span aria-hidden="true">&gt;</span>Explore it.<br/> Get to know it,<br/> <span class="shifted"><span aria-hidden="true">H@ve</span><span class="ro">Have</span> fun with it.</span></span> </p> <p> <span class="blue"><span aria-hidden="true">&lt;</span>After all, <span aria-hidden="true">they*ll</span><span class="ro">they'll</span> be the ones<br/> writing <span aria-hidden="true">t#e</span><span class="ro">the</span> code of the future.</span> </p> <p> <span class="pink"><span aria-hidden="true">&gt;</span>Help <span aria-hidden="true">t#em</span><span class="ro">them</span> learn the new language<br/> for a new economy.</span> </p> <p><img src="images/logo-barclays.jpg" alt="Barclays logo"/></p>
+]]>
+</body>
+</section>
+<section>
+<title>Book a session</title>
+<in_nav>true</in_nav>
+<id>2</id>
+<body>
+<![CDATA[
+<p> <a class="beige-box" href="http://www.barclays.co.uk/codeplayground" target="_blank" data-event-id="Book_session"> Book a session now<br/> in a branch near you> </a> </p> <p> <span class="blue"><span aria-hidden="true">&gt;</span>If you*re aged 7- 17<br/> and enjoyed Barclays Code Playground,<br/> we’d love you to</span><br/> <span class="lightgreen">come along to a<br/> coding session in branch.</span> </p> <p> <span class="pink"><span aria-hidden="true">&lt;There*ll</span><span class="ro">There'll</span> be tips,<br/> <span aria-hidden="true">ch@llenges</span><span class="ro">challenges</span><br/> and many more things to code.</span> </p> <p> <span class="orange"><span aria-hidden="true">&gt;</span>Our trained Digital Eagles<br/> will be there</span><br/> <span class="lightgreen">to help you take your<br/> coding skills<br/> <span class="unshifted">&lt;to the next level.</span></span> </p>
+]]>
+</body>
+</section>
+<section>
+<title>Watch films</title>
+<in_nav>true</in_nav>
+<id>3</id>
+<body>
+<![CDATA[
+<div class="info__films--desktop"> <p><span class="blue">&gt;Learn more about how we’re getting kids coding. Click a thumbnail to watch a short film.</span></p> <div class="info__tv"> <div id="player" class="info__player"></div> </div> <ul class="info__playlist"> <li class="info__playlist-item" data-video-id="Ii6-KTBFv2E"><div class="info__playlist-img"></div></li> <li class="info__playlist-item" data-video-id="epBkLhhVJQc"><div class="info__playlist-img"></div></li> <li class="info__playlist-item" data-video-id="Rtbh8J0jVNY"><div class="info__playlist-img"></div></li> <li class="info__playlist-item" data-video-id="vratkGTLc_M"><div class="info__playlist-img"></div></li> <li class="info__playlist-item" data-video-id="Zz-6HV06DyY"><div class="info__playlist-img"></div></li> <li class="info__playlist-item" data-video-id="-iWQnRIJZic"><div class="info__playlist-img"></div></li> <li class="info__playlist-item" data-video-id="qySXBq_XYpI"><div class="info__playlist-img"></div></li> </ul> </div> <div class="info__films--mobile"> <p><span class="blue">&gt;Learn more about how we’re getting kids coding.</span></p> <div class="videoWrapper"> <iframe width="560" height="315" src="//www.youtube.com/embed/Ii6-KTBFv2E?showinfo=0&modestbranding=1&rel=0&autohide=1" frameborder="0" allowfullscreen></iframe> </div> <div class="videoWrapper"> <iframe width="560" height="315" src="//www.youtube.com/embed/epBkLhhVJQc?showinfo=0&modestbranding=1&rel=0&autohide=1" frameborder="0" allowfullscreen></iframe> </div> <div class="videoWrapper"> <iframe width="560" height="315" src="//www.youtube.com/embed/Rtbh8J0jVNY?showinfo=0&modestbranding=1&rel=0&autohide=1" frameborder="0" allowfullscreen></iframe> </div> <div class="videoWrapper"> <iframe width="560" height="315" src="//www.youtube.com/embed/vratkGTLc_M?showinfo=0&modestbranding=1&rel=0&autohide=1" frameborder="0" allowfullscreen></iframe> </div> <div class="videoWrapper"> <iframe width="560" height="315" src="//www.youtube.com/embed/Zz-6HV06DyY?showinfo=0&modestbranding=1&rel=0&autohide=1" frameborder="0" allowfullscreen></iframe> </div> <div class="videoWrapper"> <iframe width="560" height="315" src="//www.youtube.com/embed/-iWQnRIJZic?showinfo=0&modestbranding=1&rel=0&autohide=1" frameborder="0" allowfullscreen></iframe> </div> </div>
+]]>
+</body>
+</section>
+<section>
+<title>Further learning</title>
+<in_nav>true</in_nav>
+<id>4</id>
+<body>
+<![CDATA[
+<p><span class="blue"><span aria-hidden="true">&gt;</span>Want to learn more? Have a look at some of our recommended sites and partners. </span></p> <ul class="info__partners-list"> <li class="info__partners-list-item lightgreen"><div class="info__partners-list-img"><img src="images/logo-scratch.png" alt="Scratch logo"/></div><p class="info__partners-list-copy"><span aria-hidden="true">&gt;</span>Scratch is a free programming software where you can create your own interactive animations and games. Click on the link to code more things. <a href="http://scratch.mit.edu" target="_blank" data-event-id="scratch" aria-label="scratch.mit.edu"><span aria-hidden="true">&gt;</span>scratch.mit.edu</a></p></li> <li class="info__partners-list-item orange"><div class="info__partners-list-img"><img src="images/logo-coder-dojo.jpg" alt="Coder Dojo logo"/></div><p class="info__partners-list-copy"><span aria-hidden="true">&gt;</span>CoderDojo is a global network of community based programming clubs for 7 – 17 year olds. Learn how to code, develop websites, apps, programs, games and explore technology. Click on the link to find a Dojo near you.<a href="https://coderdojo.com/" target="_blank" data-event-id="coder_dojo"><span aria-hidden="true">&gt;</span>coderdojo.com</a></p></li> <li class="info__partners-list-item pink"><div class="info__partners-list-img"><img src="images/logo-code-club.jpg" alt="Code Club logo"/></div><p class="info__partners-list-copy"><span aria-hidden="true">&gt;</span>Code Club is a network of over 2000 volunteer led, weekly, after school coding clubs in the UK. Click on the link to find a club near you.<a href="http://www.codeclub.org.uk" target="_blank" data-event-id="code-club"><span aria-hidden="true">&gt;</span>www.codeclub.org.uk</a></p></li> <li class="info__partners-list-item lightgreen"><div class="info__partners-list-img"><img src="images/logo-my-kidsy.png" alt="MyKidsy logo"/></div><p class="info__partners-list-copy"><span aria-hidden="true">&gt;</span>MyKidsy is a directory of London-based innovative and educational activities for children to help unlock their hidden talents and creativity. Click on the link to find an after school club near you. <a href="http://www.mykidsy.com" target="_blank" data-event-id="my_kidsy"><span aria-hidden="true">&gt;</span>www.mykidsy.com</a></p></li> <li class="info__partners-list-item blue"><div class="info__partners-list-img"><img src="images/logo-young-rewired-state.jpg" alt="Young Rewired State logo"/></div><p class="info__partners-list-copy"><span aria-hidden="true">&gt;</span>Young Rewired State is a young team of coders who attend events around the world and use their digital skills to build prototypes, complete challenges and meet others who share their interests. Click on the link to find out more. <a href="http://www.yrs.io" target="_blank" data-event-id="young_rewired_state"><span aria-hidden="true">&gt;</span>www.yrs.io</a></p></li> <li class="info__partners-list-item pink"><div class="info__partners-list-img"><img src="images/logo-apps-for-good.jpg" alt="Apps for Good logo"/></div><p class="info__partners-list-copy"><span aria-hidden="true">&gt;</span>Apps for Good is a technology education movement where 10 – 18 year olds learn to create apps that change their world. Click on the link to find out more <a href="http://www.appsforgood.org" target="_blank" data-event-id="apps_for_good"><span aria-hidden="true">&gt;</span>www.appsforgood.org</a></p></li> <li class="info__partners-list-item orange"><div class="info__partners-list-img"><img src="images/logo-free-formers.jpg" alt="Free Formers logo"/></div><p class="info__partners-list-copy"><span aria-hidden="true">&gt;</span>Free:Formers helps companies drive digital transformation through programmes that teach relevant and practical skills to anyone from frontline staff all the way up to senior leadership teams. Click on the link to find out more.<a href="http://www.freeformers.com" target="_blank"><span aria-hidden="true">&gt;</span>www.freeformers.com</a></p></li> <li class="info__partners-list-item pink"><div class="info__partners-list-img"><img src="images/logo-fuze.png" alt="FUZE logo"/></div><p class="info__partners-list-copy"><span aria-hidden="true">&gt;</span>FUZE Technologies supports schools in meeting the requirements of the new National Curriculum for computing, offering a computing platform that helps make learning text based programming as easy and accessible as possible. Click on the link to learn more. <a href="http://www.fuze.co.uk/" target="_blank" data-event-id="fuze_technologies"><span aria-hidden="true">&gt;</span>www.fuze.co.uk</a></p></li> <li class="info__partners-list-item blue"><div class="info__partners-list-img"><img src="images/logo-barclays.jpg" alt="Barclays logo"/></div><p class="info__partners-list-copy"><span aria-hidden="true">&gt;</span>The Barclays Digital Driving Licence will help you to become more digitally savvy and keep up to date with technology. We have joined forces/partnered with companies such as Microsoft and IBM to create a fun interactive learning experience. Download the free app today via the App Store or Google Play store or join in via the website<a href="https://www.digitaldrivinglicence.barclays.com" target="_blank" data-event-id="digital_driving_licence"><span aria-hidden="true">&gt;</span>digitaldrivinglicence.barclays.com</a></p></li> </ul>
+]]>
+</body>
+</section>
+<section>
+<title>Cookie Policy</title>
+<in_nav>false</in_nav>
+<id>5</id>
+<color>green</color>
+<body>
+<![CDATA[
+<h1 class="pink"><span aria-hidden="true">&gt;</span>Cookie Policy: </h1> <p class="blue">We may collect information about your computer, including your IP address, operating system and browser type, for system administration and in order to create reports. This is statistical data about our users’ browsing actions and patterns, and does not identify any individual. </p> <p class="lightgreen shifted">The only cookies in use on our site are for <b>Google Analytics</b>. Google Analytics is a web analytics tool that helps website owners understand how visitors engage with their website. Google Analytics customers can view a variety of reports about how visitors interact with their website so that they can improve it. </p> <p class="blue shifted">Like many services, Google Analytics uses first-party cookies to track visitor interactions as in our case, where they are used to collect information about how visitors use our site. We then use the information to compile reports and to help us improve our site. </p> <p class="lightgreen shifted">Cookies contain information that is transferred to your computer’s hard drive. These cookies are used to store information, such as the time that the current visit occurred, whether the visitor has been to the site before and what site referred the visitor to the web page. </p> <p class="blue shifted">Google Analytics collects information anonymously. It reports website trends without identifying individual visitors. You can opt out of Google Analytics without affecting how you visit our site – for more information on opting out of being tracked by Google Analytics across all websites you use, visit this <a href="http://tools.google.com/dlpage/gaoptout" target="_blank" class="blue">Google page</a>.</p> <p><img src="images/logo-barclays.jpg" alt="Barclays logo"/></p>
+]]>
+</body>
+</section>
+<section>
+<title>Terms of use</title>
+<in_nav>false</in_nav>
+<id>6</id>
+<color>pink</color>
+<body>
+<![CDATA[
+<h1 class="orange"><span aria-hidden="true">&lt;</span>PLEASE READ THESE TERMS AND CONDITIONS CAREFULLY BEFORE USING THIS SITE</h1> <h2 class="pink"><span aria-hidden="true">&gt;</span>Terms of website use</h2> <p class="blue">These terms of use (together with the documents referred to in it) set out the terms that apply when you use our website www.barclayscodeplayground.co.uk ("our site"), whether as a guest or a registered user. Use of our site includes accessing, browsing, or registering to use it.</p> <p class="lightgreen shifted">Please read these terms of use carefully before you start to use our site, as these will apply to your use of our site. We recommend that you print a copy of these terms for future reference.</p> <p class="blue shifted">By using our site, you confirm that you accept these terms of use and that you agree to comply with them. If you do not agree to these terms of use, you must not use our site.</p> <h2 class="pink"><span aria-hidden="true">&gt;</span>Information about us</h2> <p class="blue">www.barclayscodeplayground.co.uk is a site operated by Barclays Bank PLC("we", “us” or “our”). We are registered in England and Wales under company number 1026167 and have our registered office at 1 Churchill Place, London E14 5HP. Barclays Bank PLC is authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority (Financial Services Register number: 122702).</p> <h1 class="orange"><span aria-hidden="true">&lt;</span>DATA WE COLLECT ABOUT YOU</h1> <p class="lightgreen">We do not collect any personal data from you.</p> <h2 class="pink"><span aria-hidden="true">&gt;</span>Changes to these terms</h2> <p class="blue">We reserve the right to revise these terms at any time without notice by amending this page. Your continued access to or use of this site will constitute your acceptance of such changes. Please check this page from time to time to take notice of any changes we make, as they are binding on you.</p> <h2 class="pink"><span aria-hidden="true">&gt;</span>Changes to our site</h2> <p class="blue">We may update our site from time to time, and may change the content at any time. We do not guarantee that our site, or any content on it, will be free from errors or omissions.</p> <p class="lightgreen shifted">Although we have taken all reasonable care to ensure that the information provided on this site is accurate, we make no representations, warranties or guarantees, whether express or implied, that the content on our site is accurate, complete or up-to-date.</p> <p class="blue shifted">Opinions and any other contents at the site are provided by us for personal use and informational purposes only and are subject to change without notice.</p> <h2 class="pink"><span aria-hidden="true">&gt;</span>Accessing our site</h2> <p class="blue">We do not guarantee that our site, or any content on it, will always be available or uninterrupted or error free. We do not guarantee that our site will be secure or free from bugs or viruses. Access to our site is permitted on a temporary basis. We may in our sole discretion suspend, withdraw, discontinue or change all or any part of our site without notice, including without limitation where we believe that you have not acted in accordance with the terms and conditions of our site. We will not be liable to you if for any reason our site is unavailable at any time or for any period.</p> <p class="lightgreen shifted">You are responsible for making all arrangements necessary for you to have access to our site. You are also responsible for ensuring that all persons who access our site through your internet connection are aware of these terms of use and other applicable terms and conditions, and that they comply with them.</p> <h2 class="pink">Intellectual property rights</h2> <p class="blue">The entire content of this site is subject to copyright with all rights reserved and the information held is for your personal use only. You may not download (all or in part), transmit or modify the site without our prior permission. However, you may print out part or all of the site for your own personal use. You must not use any part of the content on our site for commercial purposes without obtaining a licence to do so from us or our licensors . We are the owner or the licensee of all intellectual property rights in our site, and in the material published on it. Those works are protected by copyright laws and treaties around the world. All such rights are reserved.</p> <h2 class="pink"><span aria-hidden="true">&gt;</span>Limitation of our liability</h2> <p class="blue">We will accept no liability in any event including (without limitation) negligence for any damages or loss of any kind, including (without limitation) direct, indirect, incidental, special or consequential damages, expenses or losses arising out of, or in connection with your use or inability to use the Site, or in connection with any error, omission, defect, computer virus or system failure, or loss of any profit, goodwill or reputation, even if expressly advised of the possibility of such loss or damages, arising out of or in connection with the access of, use of, performance of, browsing in or linking to other sites from this site.</p> <p class="lightgreen shifted">Nothing in these terms of use excludes or limits our liability for death or personal injury arising from our negligence, or our fraud or fraudulent misrepresentation, or any other liability that cannot be excluded or limited by English law.</p> <p class="blue shifted">We reserve the right to modify, suspend or discontinue, temporarily or permanently, the site or any part of it, with or without notice, at any time. You agree that we shall not be liable to you or to any third party for any such modification, suspension or discontinuance of the site.</p> <h1 class="orange"><span aria-hidden="true">&lt;</span>THIRD PARTY SITES</h1> <p class="blue">Some of the content on this site is provided by third party providers and we assume no responsibility for the accuracy of such content.</p> <p class="lightgreen shifted">Any links to third party internet websites from this site should not be interpreted as an endorsement by us of those websites. You use such links entirely at your own risk and we accept no responsibility or liability for the content, use or availability of such websites. We have not verified the truth or accuracy of any content of such websites. You are responsible for compliance with any third party terms relating to your use of those websites.</p> <p class="blue shifted">No third party is permitted to link any other website to this site without obtaining our prior written consent.</p> <h2 class="pink"><span aria-hidden="true">&gt;</span>Applicable law</h2> <p class="blue">These terms of use (and any non-contractual disputes or claims) are governed by English law. We both agree to the exclusive jurisdiction of the courts of England and Wales to determine any matter or dispute in connection with or arising out of this site and these terms and conditions.</p> <p class="lightgreen shifted">This site is designed for use in the UK and is not directed to, nor intended for distribution or use by, any person or entity in any jurisdiction or country where the publication or availability of this site or such distribution or use would be contrary to local law or regulation. If you choose to access information on this site, it is your responsibility to comply with the applicable local, national or international laws and any use of this site outside the UK is entirely at your own risk. For guidance relating to your specific situation, please contact your legal adviser.</p> <h2 class="pink"><span aria-hidden="true">&gt;</span>Contact us</h2> <p class="blue">To contact us, please call at: 0800 400 100</p> <p class="orange">Thank you for visiting our site.</p> <p><img src="images/logo-barclays.jpg" alt="Barclays logo"/></p>
+]]>
+</body>
+</section>
+</info>
+</dictionary>
