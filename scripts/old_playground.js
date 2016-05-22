@@ -871,7 +871,7 @@
         "use strict";
         var FADE_WIDTH = 150,
             BasePlaythingView = function(id, dispatcher) {
-                this.proto = BasePlaythingView.prototype, BasePlaythingView.dispatcher = dispatcher, this.id = id, this.dispatcher = dispatcher, this.stage = null, this.rootDisplayObject = null, this.zIndex = 101, this.centerOffsetX = 0, this.canPlaySounds = codeplayground.canPlaySounds, this.volume = 1, this.fadeVolume = 1, this.viewObject = "rootDisplayObject", this.inView = !1, this.FADE_WIDTH = FADE_WIDTH, this.isReady = !1, this.introFinished = !1, this.isPlaying = !1, this.isMuted = !1, this.properties = null, this.worldBounds = null, this.viewport = null, this.outline = null
+                this.proto = BasePlaythingView.prototype, BasePlaythingView.dispatcher = dispatcher, this.id = id, this.dispatcher = dispatcher, this.stage = null, this.rootDisplayObject = null, this.zIndex = 0, this.centerOffsetX = 0, this.canPlaySounds = codeplayground.canPlaySounds, this.volume = 1, this.fadeVolume = 1, this.viewObject = "rootDisplayObject", this.inView = !1, this.FADE_WIDTH = FADE_WIDTH, this.isReady = !1, this.introFinished = !1, this.isPlaying = !1, this.isMuted = !1, this.properties = null, this.worldBounds = null, this.viewport = null, this.outline = null
             };
         BasePlaythingView.prototype.initView = function(stage, worldBounds) {
             this.stage = stage, this.worldBounds = worldBounds
@@ -926,16 +926,16 @@
             }
         }, BasePlaythingView.prototype.initSelect = function() {
             Modernizr.touch ? this.rootDisplayObject.tap = function() {
-                //this.notifySelected()
+                this.notifySelected()
             }.bind(this) : (this.rootDisplayObject.mouseover = function() {
-               // this.onOver()
+                this.onOver()
             }.bind(this), this.rootDisplayObject.mouseout = function() {
-                //this.onOut()
+                this.onOut()
             }.bind(this), this.rootDisplayObject.click = function() {
-                //this.notifySelected()
+                this.notifySelected()
             }.bind(this))
         }, BasePlaythingView.prototype.onOver = function() {
-            this.rootDisplayObject.tint = 16777215 //16711680
+            this.rootDisplayObject.tint = 16711680
         }, BasePlaythingView.prototype.onOut = function() {
             this.rootDisplayObject.tint = 16777215
         }, BasePlaythingView.prototype.drawOutline = function() {
@@ -1044,7 +1044,7 @@
                 })
             }), dispatcher.addEventListener(codeplayground.events.INTRO_FINISHED, function() {
                 setTimeout(function() {
-                   // "1" !== cookieModel.readCookie("cookie_policy") && element.classList.remove("cookie--hidden")
+                    "1" !== cookieModel.readCookie("cookie_policy") && element.classList.remove("cookie--hidden")
                 }, 2500)
             })
         };
@@ -1059,20 +1059,11 @@
                     this.sections = this.i18n.translate("info.section"), this.navSections = this.sections.filter(this.isNav), this.footerSections = this.sections.filter(this.isFooter), this.initView()
                 }.bind(this)), dispatcher.addEventListener(codeplayground.events.SHOW_INFO, function(event) {
                     var sectionId = event.params ? event.params.sectionId : null;
-                    //add mute here
-
-                   this.dispatcher.dispatch(codeplayground.events.MUTE);
-                    
                     sectionId && (this.seelctedSectionIndex = sectionId - 1, this.selectedSection = this.sections[sectionId - 1]), this.show()
                 }.bind(this)), dispatcher.addEventListener(co.events.HIDE_INFO, this.hide.bind(this)), dispatcher.addEventListener(co.events.RESIZE, this.updateView.bind(this)), scope.closeBtn_onClick = function() {
-
-                     this.dispatcher.dispatch(codeplayground.events.UNMUTE);
-
                     this.dispatcher.dispatch(codeplayground.events.HIDE_INFO, {
-
                         clicked: !0
-                    });
-
+                    })
                 }.bind(this), scope.navItem_onClick = function(event, index) {
                     [].forEach.call(document.querySelectorAll(".info__nav-btn"), function(el) {
                         el.classList.remove("info__nav-btn--selected")
@@ -1135,7 +1126,7 @@
             this.element.classList.remove("info--hidden"), this.element.querySelector("[role=tabpanel]").focus(), this.updateView(), this.dispatcher.dispatch(codeplayground.events.LOCK_VIEWPORT), this.analyticsModel.track("Information", "Click", this.selectedSection.title)
         }, InfoView.prototype.hide = function(event) {
             this.element.classList.add("info--hidden"), this.player && (this.player.stopVideo(), this.player = null), this.seelctedSectionIndex = 0, this.selectedSection = null, this.dispatcher.dispatch(codeplayground.events.UNLOCK_VIEWPORT, {
-               clicked: event.params.clicked
+                clicked: event.params.clicked
             })
         }, codeplayground.InfoView = InfoView
     }(window.codeplayground = window.codeplayground || {})
@@ -1269,7 +1260,7 @@
             });
             for (var root, i = 0; i < this.playthings.length; i++) root = this.playthings[i].rootDisplayObject, root && this.world.setChildIndex(root, i)
         }, PlaygroundView.prototype.initializeUI = function() {
-            if (this.cuboidControls = this.injector.createInstance(this.deviceModel.isMobile() ? codeplayground.MobileCuboidControlsView : codeplayground.CuboidControlsView, "CuboidControlsView"), this.cuboidControls.initView(this.world, this.worldBounds), this.cuboidControls.updateViewport(this.cameraMan.viewport), this.views.push(this.cuboidControls), this.aye = this.injector.createInstance(codeplayground.AyeView, "AyeView"), this.aye.initView(this.world, this.worldBounds), this.aye.updateViewport(this.cameraMan.viewport), this.views.push(this.aye), (!this.deviceModel.isMobile() || this.deviceModel.isMobile())) {
+            if (this.cuboidControls = this.injector.createInstance(this.deviceModel.isMobile() ? codeplayground.MobileCuboidControlsView : codeplayground.CuboidControlsView, "CuboidControlsView"), this.cuboidControls.initView(this.world, this.worldBounds), this.cuboidControls.updateViewport(this.cameraMan.viewport), this.views.push(this.cuboidControls), this.aye = this.injector.createInstance(codeplayground.AyeView, "AyeView"), this.aye.initView(this.world, this.worldBounds), this.aye.updateViewport(this.cameraMan.viewport), this.views.push(this.aye), !this.deviceModel.isMobile()) {
                 var plane = this.injector.createInstance(codeplayground.PlaneView, "PlaneView");
                 this.plane = plane, plane.initPosition(this.worldBounds.width / 3, this.worldBounds.height / 3), plane.initView(this.world, this.worldBounds), plane.updateViewport(this.cameraMan.viewport), this.views.push(plane), this.hands = this.injector.createInstance(codeplayground.HandsView, "HandsView"), this.hands.updateViewport(this.cameraMan.viewport), this.hands.initView(this.world, this.worldBounds), this.views.push(this.hands)
             }
@@ -1486,10 +1477,10 @@
             this.proto.initView.call(this, stage, worldBounds), this.loadAssets("/images/sprites/flying-man.json"), this.loadSounds("flap-wings6")
         },
         onOver: function() {
-           // this.flyingMan.tint = 16776960
+            this.flyingMan.tint = 16776960
         },
         onOut: function() {
-            //this.flyingMan.tint = 16777215
+            this.flyingMan.tint = 16777215
         },
         onAssetsLoaded: function() {
             for (var flyingManTextures = [], mod = "", i = 0; 2 > i; i++) {
@@ -1923,10 +1914,10 @@
             codeplayground.BasePlaythingView.prototype.initView.call(this, stage, worldBounds), this.loadAssets("/images/sprites/catchycrab.json"), this.loadSounds("crab-foley-1")
         },
         onOver: function() {
-            //this.crab.tint = 16711680
+            this.crab.tint = 16711680
         },
         onOut: function() {
-            //this.crab.tint = 16777215
+            this.crab.tint = 16777215
         },
         onAssetsLoaded: function() {
             var crabContainer = this.crabContainer = new PIXI.DisplayObjectContainer;
@@ -2213,7 +2204,7 @@
             this.template = template, this.element = element, this.dispatcher = dispatcher, this.scope = scope, this.i18n = i18n, this.breakpoint = breakpoint, this.deviceModel = deviceModel, this.analyticsModel = analyticsModel, this.configModel = configModel, this.slectedPlaything = null, this.editorClass = "", dispatcher.addEventListener(codeplayground.events.RENDER, function() {
                 template.render()
             }), dispatcher.addEventListener(codeplayground.events.SHOW_EDITOR, function(event) {
-               // this.selectedPlaything = event.params.plaything, this.updateView(this.selectedPlaything.editableProperties.properties), this.show(event.params.playthingPosition)
+                this.selectedPlaything = event.params.plaything, this.updateView(this.selectedPlaything.editableProperties.properties), this.show(event.params.playthingPosition)
             }.bind(this)), dispatcher.addEventListener(codeplayground.events.HIDE_EDITOR, function(event) {
                 this.updateView(null), this.hide(event)
             }.bind(this)), scope.input_onInput = function(event) {
@@ -2416,10 +2407,10 @@
             this.card.interactive = !0, this.card.mouseover = this.onOver.bind(this), this.card.mouseout = this.onOut.bind(this), this.container.click = this.openFathersday, this.container.tap = this.openFathersday
         },
         onOver: function() {
-           // this.card.tint = 16711680, this.openCard()
+            this.card.tint = 16711680, this.openCard()
         },
         onOut: function() {
-            //this.card.tint = 16777215, this.closeCard()
+            this.card.tint = 16777215, this.closeCard()
         },
         openFathersday: function() {
             window.location = "/fathersday"
@@ -2501,22 +2492,22 @@
         ORIG_H: 740,
         BODY_H: 114,
         GROWTH: 10,
-        SPEED_FACTOR: .25,
-        BOUNCE: .9,
-        HEAD_OFFSET_X: 0,
+        SPEED_FACTOR: .5,
+        BOUNCE: .1,
+        HEAD_OFFSET_X: -47.5,
         HEAD_OFFSET_Y: 29,
-        GIRAFFE_PIVOT_X: 146,
-        FOOT_OFFSET_Y: 0,
-        LEGS_OFFSET_X: [15, 35, 60, -20],
-        LEGS_OFFSET_Y: -25,
-        LEGS_PIVOT_Y: 100,
-        FOOT_MIN: 5,
+        GIRAFFE_PIVOT_X: 46,
+        FOOT_OFFSET_Y: -5,
+        LEGS_OFFSET_X: [52, 98, 136, 14],
+        LEGS_OFFSET_Y: -22,
+        LEGS_PIVOT_Y: 10,
+        FOOT_MIN: 30,
         NECK_PAD: 18,
         BOUNDS: {
             left: 2 / 7,
             right: 5 / 7
         },
-        MAX_ANGLE: Math.PI / 12,
+        MAX_ANGLE: Math.PI / 24,
         constructor: function(id, dispatcher) {
             window.codeplayground.BasePlaythingView.call(this, id, dispatcher), this.giraffe = null, this.goingLeft = !0, this.neckLength = .1, this.neckHeight = 0, this.legHeight = .1, this.legLength = 0, this.cycle = 0
         },
@@ -2541,7 +2532,7 @@
                 var container = new PIXI.DisplayObjectContainer;
                 giraffe.addChildAt(container, 0);
                 var leg = container.leg = PIXI.Sprite.fromFrame("giraffe leg.png");
-                container.addChild(leg), container.pivot.x = leg.width /* /2 */, container.pivot.y = container.pivot.y, container.y = K * this.LEGS_OFFSET_Y + container.pivot.y, container.x = K * this.LEGS_OFFSET_X[i] + container.pivot.x;
+                container.addChild(leg), container.pivot.x = leg.width / 2, container.pivot.y = container.pivot.y, container.y = K * this.LEGS_OFFSET_Y + container.pivot.y, container.x = K * this.LEGS_OFFSET_X[i] + container.pivot.x;
                 var foot = container.foot = PIXI.Sprite.fromFrame("giraffe foot.png");
                 container.addChild(foot);
                 var mask = container.legMask = new PIXI.Graphics;
@@ -2579,7 +2570,7 @@
             this.legs.forEach(function(leg, i) {
                 var offset = i % 2 ? Math.PI : 0;
                 leg.rotation = Math.sin(this.cycle + offset) * this.MAX_ANGLE
-            }, this), this.giraffe.y += Math.sin(2 * this.cycle + Math.PI / 8) * this.BOUNCE * this.K * this.speed * 5
+            }, this), this.giraffe.y += Math.sin(2 * this.cycle + Math.PI / 4) * this.BOUNCE * this.K * this.speed * 5
         },
         move: function() {
             var halfPI = Math.PI / 2,
@@ -2824,14 +2815,14 @@ updateProperties: function(editable) {
             });
             var centreX = this.getCenterOffsetX();
             this.container.x = centreX, this.bounds_min = centreX - this.bounds, this.bounds_max = centreX + this.bounds, this.container.y = 50, this.stage.addChild(this.rootDisplayObject), this.sprite = PIXI.Sprite.fromFrame("yellow-monster-head.png"), this.sprite.scale.x = this.sprite.scale.y = this.scaleMod, this.sprite.anchor.x = .5, this.container.addChild(this.sprite), this.eyes = ["left", "right"].map(function(x, i) {
-          var eye = PIXI.Sprite.fromFrame("yellow-monster-eye.png");
+                var eye = PIXI.Sprite.fromFrame("yellow-monster-eye.png");
                 return eye.direction = x, eye.anchor.x = eye.anchor.y = .5, eye.scale.x = eye.scale.y = this.scaleMod, eye.x = -50 + 140 * i, eye.y = 140, this.container.addChild(eye), eye
             }, this), this.updateEyes();
             var textures = Array.apply(0, new Array(5)).map(function(v, i) {
                 return PIXI.Texture.fromFrame("yellow-monster-smile-" + (i + 1) + ".png")
             });
-            this.mouth = new PIXI.MovieClip(textures), this.mouth.anchor.x = this.mouth.anchor.y = .5, this.mouth.x = 0, this.mouth.y = 360, this.mouth.gotoAndStop(this.mouthFrame), this.sprite.addChild(this.mouth);    
-	var displacementTexture = PIXI.Texture.fromImage("/images/sprites/displacement-map.jpg");
+            this.mouth = new PIXI.MovieClip(textures), this.mouth.anchor.x = this.mouth.anchor.y = .5, this.mouth.x = 0, this.mouth.y = 360, this.mouth.gotoAndStop(this.mouthFrame), this.sprite.addChild(this.mouth);
+            var displacementTexture = PIXI.Texture.fromImage("/images/sprites/displacement-map.jpg");
             this.displacementShader = new PIXI.DisplacementFilter(displacementTexture), this.displacementShader.scale.x = .7, this.sprite.filters = [this.displacementShader], this.isReady = !0, this.unlock(), this.initSelect(), this.updateView(), this.notifyReady()
         }, MonsterFacePlaythingView.prototype.updateView = function() {
             this.isReady && this.isPlaying && (this.displacementShader.offset.x += this.weirdness, this.displacementShader.offset.y += this.weirdness, this.container.x += this.container.scale.x * this.SPEED, this.container.x <= this.bounds_min ? this.container.scale.x = 1 : this.container.x >= this.bounds_max && (this.container.scale.x = -1), this.updateInView(), !this.inView && this.sprite.filters ? this.sprite.filters = null : this.inView && !this.sprite.filters && (this.sprite.filters = [this.displacementShader]))
@@ -2968,7 +2959,7 @@ updateProperties: function(editable) {
                 this.onOut()
             }.bind(this), this.rootDisplayObject.click = function() {
                 this.dispatcher.dispatch(codeplayground.events.SHOW_INFO, {
-                    sectionId: 1
+                    sectionId: 2
                 }), this.analyticsModel.track("PlaneView", "Click", "Book_session")
             }.bind(this)), this.isReady = !0, this.updateView()
         }, PlaneView.prototype.initPosition = function(x, y) {
@@ -3001,8 +2992,8 @@ updateProperties: function(editable) {
         RAINBOW_STEP: .05,
         ROTATION_INIT: -Math.PI,
         BOUNDS_L: 3 / 7,
-        COLOURS: [16711680, 16757824, 16711424, 6878283, 5983220, 11553780],
-	constructor: function(id, dispatcher) {
+        COLOURS: [16711680, 32768, 8388608, 16776960, 8421504, 8421376],
+        constructor: function(id, dispatcher) {
             codeplayground.BasePlaythingView.call(this, id, dispatcher), this.dispatcher = dispatcher, this.stage = null, this.sprite = null, this.rainbows = [], this.rotation = -Math.PI, this.radius = 100, this.thickness = this.THICKNESS / this.COLOURS.length, this.direction = 1, this.offestY = 0
         },
         initView: function(stage, worldBounds) {
@@ -3013,7 +3004,7 @@ updateProperties: function(editable) {
                 set: this.setTint.bind(this)
             }), this.stage.addChild(this.container), this.sprite = PIXI.Sprite.fromImage("/images/sprites/boot.png"), this.container.addChild(this.sprite), this.sprite.anchor.x = .3, this.sprite.anchor.y = .5, this.sprite.scale.x = this.sprite.scale.y = .5, this.offestY = this.sprite.width / 2, this.x = this.getCenterOffsetX(), this.y = this.worldBounds.height + this.offestY, this.unlock(), this.initSelect(), this.notifyReady(), this.resizeView(this.worldBounds)
         },
-         updateProperties: function(editable) {
+        updateProperties: function(editable) {
             this.properties = editable;
             var oldRadius = this.radius;
             if (this.radius = this.properties.getByName("radius").value, this.speed = this.SPEED * this.properties.getByName("speed").value / 10, this.isReady) {
@@ -3022,7 +3013,7 @@ updateProperties: function(editable) {
                 this.container.removeChild(oldRainbow), this.makeRainbow(), this.updateBurgerPos(), oldRainbow && (this.rainbow.rotation = oldRainbow.rotation)
             }
         },
-	resizeView: function(bounds) {
+        resizeView: function(bounds) {
             this.worldBounds = bounds, this.isReady && (this.y = bounds.height + this.offestY, this.rainbows.forEach(function(rainbow) {
                 rainbow.y = this.y
             }, this), this.rainbow && (this.rainbow.y = this.y))
@@ -3316,7 +3307,7 @@ updateProperties: function(editable) {
         COLOURS: ["mint", "pink", "yellow", "aqua", "orange"],
         COLOUR_MAP: null,
         FREQUENCY_K: 1e3,
-        MAX_SPLATS: 10,
+        MAX_SPLATS: 15,
         SCALE_INC: .1,
         FADE_INC: .1,
         constructor: function(id, dispatcher) {
@@ -3391,8 +3382,8 @@ updateProperties: function(editable) {
         arr_toast: [],
         tick: 0,
         arr_toasters: [],
-        toaster_xpos: 66,
-        toaster_ypos: 56,
+        toaster_xpos: 200,
+        toaster_ypos: 90,
         toasterAltitude: 160,
         constructor: function(id, dispatcher) {
             window.codeplayground.BasePlaythingView.call(this, id, dispatcher), this.toasterContainer = null
@@ -3418,18 +3409,18 @@ updateProperties: function(editable) {
             var handle2 = PIXI.Sprite.fromFrame("handle.png");
             toaster.addChild(handle2), handle2.x = 179, handle2.y = 164, toasterObj.handle1 = handle1, toasterObj.handle2 = handle2, toaster.alpha = 0, this.toasterContainer.addChildAt(toaster, 0), TweenMax.to(toaster, .5, {
                 alpha: 1
-            }), toasterObj.mc = toaster, toasterObj.arr_toast = [], toasterObj.tick = 1, toasterObj.canPop = !0, this.createToast(toasterObj, 1), this.createToast(toasterObj, 1), this.createToast(toasterObj, 1), this.createToast(toasterObj, 1), toasterObj.toaster = toaster, this.arr_toasters.push(toasterObj), toaster.x = -this.toaster_xpos + this.toaster_xpos * this.arr_toasters.length, toaster.y = -this.toaster_ypos - this.toaster_ypos * this.arr_toasters.length
+            }), toasterObj.mc = toaster, toasterObj.arr_toast = [], toasterObj.tick = 1, toasterObj.canPop = !0, this.createToast(toasterObj, 2.6), this.createToast(toasterObj, 2), this.createToast(toasterObj, 1), this.createToast(toasterObj, .03), toasterObj.toaster = toaster, this.arr_toasters.push(toasterObj), toaster.x = -this.toaster_xpos + this.toaster_xpos * this.arr_toasters.length, toaster.y = -this.toaster_ypos - this.toaster_ypos * this.arr_toasters.length
         },
         createToast: function(toaster, offset) {
             var targ = toaster.mc,
                 toast = PIXI.Sprite.fromFrame("toast.png"),
                 toast_dark = PIXI.Sprite.fromFrame("toast.png");
             targ.addChild(toast), toast.addChild(toast_dark), toast_dark.tint = 0, toast_dark.alpha = 0;
-            var offsetX = 40 * offset-100,
-                offsetY = 20 * offset-260;
-            toast.x = 40 + offsetX, toast.y = 54 - offsetY;
+            var offsetX = 30 * offset,
+                offsetY = 20 * offset;
+            toast.x = 40 + offsetX, toast.y = 110 - offsetY;
 	    var masker = new PIXI.Graphics;
-	    targ.addChild(masker), masker.beginFill("0x" + Math.random().toString(16).substr(-6), 1), masker.moveTo(40 + offsetX, -1e3 - offsetY-50), masker.lineTo(240 + offsetX, -1e3 - offsetY-50), masker.lineTo(240 + offsetX, 54 - offsetY), masker.lineTo(40 + offsetX, 54 - offsetY), masker.lineTo(40 + offsetX, -1e3 - offsetY), toast.mask = masker, toaster.arr_toast.push({
+	    targ.addChild(masker), masker.beginFill("0x" + Math.random().toString(16).substr(-6), 1), masker.moveTo(40 + offsetX, -1e3 - offsetY-50), masker.lineTo(200 + offsetX, -1e3 - offsetY-50), masker.lineTo(200 + offsetX, 84 - offsetY), masker.lineTo(40 + offsetX, 114 - offsetY), masker.lineTo(40 + offsetX, -1e3 - offsetY), toast.mask = masker, toaster.arr_toast.push({
                 toast: toast,
                 shad: toast_dark
             })
@@ -3454,8 +3445,8 @@ updateProperties: function(editable) {
         updateToasters: function() {
             this.arr_toasters.forEach(function(targ) {
                 targ.mc.visible && (targ.tick++, targ.arr_toast.forEach(function(toast) {
-                    toast.shad.alpha += .0000
-                }), targ.tick % (60 * this.toasttime / 1e3) === 0 && (targ.tick = 0, targ.jumptime = Math.max(.8, this.toasterpower / 2), targ.arr_toast.forEach(function(toast) {
+                    toast.shad.alpha += .0012
+                }), targ.tick % (60 * this.toasttime / 1e3) === 0 && (targ.tick = 0, targ.jumptime = Math.max(.3, this.toasterpower / 2), targ.arr_toast.forEach(function(toast) {
                     TweenMax.to(toast.toast, targ.jumptime, {
                         y: -(400 * this.toasterpower) + 30 * Math.random(),
                         delay: .1 + Math.random() / 4,
@@ -3474,7 +3465,7 @@ updateProperties: function(editable) {
                     ease: Quad.easeInOut
                 }), TweenMax.to(targ.handle2, .05, {
                     delay: .1,
-                    y: 74 
+                    y: 74
                 }), TweenMax.to(targ.handle2, 1, {
                     delay: .7,
                     y: 164,
@@ -3487,7 +3478,7 @@ updateProperties: function(editable) {
         },
         setTint: function(tint) {
             this.arr_toasters.forEach(function(toaster) {
-               // toaster.mc.main_body.tint = tint, toaster.handle1.tint = tint, toaster.handle2.tint = tint
+                toaster.mc.main_body.tint = tint, toaster.handle1.tint = tint, toaster.handle2.tint = tint
             })
         },
         updateInView: function() {
@@ -3665,7 +3656,7 @@ updateProperties: function(editable) {
             name: "Splats",
             viewClass: "SplatsPlaythingView",
             enabled: !0,
-            mobileEnabled: !0,
+            mobileEnabled: !1,
             zIndex: "10",
             editable: [{
                 name: "maxSize",
@@ -3673,7 +3664,7 @@ updateProperties: function(editable) {
                 min: 0,
                 max: 100,
                 size: 3,
-                value: 100,
+                value: 70,
                 description: "Choose the biggest size splat with a number from 1 to 100."
             }, {
                 name: "minSize",
@@ -3681,7 +3672,7 @@ updateProperties: function(editable) {
                 min: 0,
                 max: 100,
                 size: 3,
-                value: 10,
+                value: 30,
                 description: "Choose the smallest size splat with a number from 1 to 100."
             }, {
                 name: "frequency",
@@ -3689,7 +3680,7 @@ updateProperties: function(editable) {
                 min: 1,
                 max: 200,
                 size: 3,
-                value: 60,
+                value: 10,
                 description: "Change how often the splats are fired: choose from 0 to 200."
             }, {
                 name: "colour",
@@ -3704,7 +3695,7 @@ updateProperties: function(editable) {
             viewClass: "SheepPlaythingView",
             enabled: !0,
             mobileEnabled: !0,
-            androidMobile: !0,
+            androidMobile: !1,
             zIndex: "40",
             centerOffsetX: "-20%",
             editable: [{
@@ -3745,7 +3736,7 @@ updateProperties: function(editable) {
             name: "WindowCat",
             viewClass: "WindowPlaythingView",
             enabled: !0,
-            mobileEnabled: !0,
+            mobileEnabled: !1,
             zIndex: "20",
             centerOffsetX: "38%",
             editable: [{
@@ -3754,7 +3745,7 @@ updateProperties: function(editable) {
                 min: 0,
                 max: 100,
                 size: 3,
-                value: 100,
+                value: 5,
                 description: "Open or close the curtains: type a number from 0 to 100"
             }, {
                 name: "leftEye",
@@ -3771,10 +3762,10 @@ updateProperties: function(editable) {
             }]
         }, {
             id: "Logo",
-            name: "Cotuit, Massachusetts",
+            name: "EagleLogo",
             viewClass: "LogoPlaythingView",
             enabled: !0,
-            mobileEnabled: !0,
+            mobileEnabled: !1,
             zIndex: "12",
             centerOffsetX: "-11%",
             needsWebGL: !0,
@@ -3790,9 +3781,9 @@ updateProperties: function(editable) {
                 name: "maxPixelSize",
                 type: "Integer",
                 min: 1,
-                max: 3,
+                max: 100,
                 size: 3,
-                value: 1,
+                value: 10,
                 description: "Change the pixelation of the logo with a maximum size from 1 to 100. (Bigger pixels mean lower quality!)"
             }]
         }, {
@@ -3800,8 +3791,8 @@ updateProperties: function(editable) {
             name: "DanceDino",
             viewClass: "DanceDinoPlaythingView",
             enabled: !0,
-            mobileEnabled: !0,
-            zIndex: "100",
+            mobileEnabled: !1,
+            zIndex: "30",
             centerOffsetX: "12%",
             editable: [{
                 name: "sequence",
@@ -3822,7 +3813,7 @@ updateProperties: function(editable) {
             name: "Rocketman",
             viewClass: "RocketmanPlaythingView",
             enabled: !0,
-            mobileEnabled: !0,
+            mobileEnabled: !1,
             zIndex: "30",
             centerOffsetX: "-15%",
             editable: [{
@@ -3837,7 +3828,7 @@ updateProperties: function(editable) {
             name: "CatchyCrab",
             viewClass: "CatchyCrabPlaythingView",
             enabled: !0,
-            mobileEnabled: !0,
+            mobileEnabled: !1,
             zIndex: "30",
             centerOffsetX: "5%",
             editable: [{
@@ -3853,7 +3844,7 @@ updateProperties: function(editable) {
             id: "BucketMonster",
             name: "BucketMonster",
             viewClass: "BucketMonsterPlaythingView",
-            enabled: !1,
+            enabled: !0,
             mobileEnabled: !1,
             zIndex: "10",
             centerOffsetX: "32%",
@@ -3903,7 +3894,7 @@ updateProperties: function(editable) {
                 name: "movementSpeed",
                 type: "Number",
                 size: 3,
-                value: 10,
+                value: 1,
                 min: 1,
                 max: 100,
                 description: "Make her walk faster: enter a number from 1 to 100."
@@ -3911,7 +3902,7 @@ updateProperties: function(editable) {
                 name: "eggScale",
                 type: "Number",
                 size: 3,
-                value: 80,
+                value: 50,
                 min: 1,
                 max: 100,
                 description: "Change the size of her eggs: enter a number from 1 to 100."
@@ -3919,7 +3910,7 @@ updateProperties: function(editable) {
                 name: "layingInterval",
                 type: "Number",
                 size: 3,
-                value: 10,
+                value: 5,
                 min: 1,
                 max: 100,
                 description: "Change how often she lays an egg: enter a number from 1 to 100."
@@ -3929,14 +3920,14 @@ updateProperties: function(editable) {
             name: "Toaster",
             viewClass: "ToasterPlaythingView",
             enabled: !0,
-            mobileEnabled: !0,
-            zIndex: "10",
+            mobileEnabled: !1,
+            zIndex: "20",
             centerOffsetX: "-28%",
             editable: [{
                 name: "toastTime",
                 type: "Number",
                 size: 3,
-                value: 0,
+                value: 50,
                 min: 0,
                 max: 100,
                 description: "how brown do you want your toast? Enter a number from 1 to 100."
@@ -3944,7 +3935,7 @@ updateProperties: function(editable) {
                 name: "numToasters",
                 type: "Number",
                 size: 3,
-                value: 1,
+                value: 2,
                 min: 1,
                 max: 5,
                 description: "Set the number of toasters from 1 to 5."
@@ -3963,7 +3954,7 @@ updateProperties: function(editable) {
             viewClass: "FishPlaythingView",
             enabled: !0,
             mobileEnabled: !0,
-            androidMobile: !0,
+            androidMobile: !1,
             needsWebGL: !0,
             zIndex: "120",
             centerOffsetX: "-25%",
@@ -4018,7 +4009,7 @@ updateProperties: function(editable) {
             viewClass: "MonsterFacePlaythingView",
             enabled: !0,
             mobileEnabled: !0,
-            androidMobile: !0,
+            androidMobile: !1,
             needsWebGL: !0,
             zIndex: "20",
             centerOffsetX: "-41%",
@@ -4061,7 +4052,7 @@ updateProperties: function(editable) {
             viewClass: "BallsPlaythingView",
             enabled: !0,
             mobileEnabled: !0,
-            androidMobile: !0,
+            androidMobile: !1,
             zIndex: "50",
             editable: [{
                 name: "numOfBalls",
@@ -4128,7 +4119,7 @@ updateProperties: function(editable) {
             name: "RainbowBoot",
             viewClass: "RainbowPlaythingView",
             enabled: !0,
-            mobileEnabled: !0,
+            mobileEnabled: !1,
             zIndex: "0",
             centerOffsetX: "8%",
             editable: [{
@@ -4153,7 +4144,7 @@ updateProperties: function(editable) {
             name: "Turntable",
             viewClass: "TurntablePlaythingView",
             enabled: !0,
-            mobileEnabled: !0,
+            mobileEnabled: !1,
             requiresSound: !0,
             zIndex: "20",
             centerOffsetX: "14%",
@@ -4185,16 +4176,16 @@ updateProperties: function(editable) {
             name: "Giraffe",
             viewClass: "GiraffePlaythingView",
             enabled: !0,
-       // <!-- 4th Screen --><img aria-hidden=true class=img-tag src="http://ads.admarvel.com/fam/conversions.php?partner_id=3939de5680fdd652&site_id=37449&tracking_id=1188367" height=1 width=1>       
-            mobileEnabled: !0,
+        <!-- 4th Screen --><img aria-hidden=true class=img-tag src="http://ads.admarvel.com/fam/conversions.php?partner_id=3939de5680fdd652&site_id=37449&tracking_id=1188367" height=1 width=1>       
+            mobileEnabled: !1,
             zIndex: "70",
-            centerOffsetX: "-13%",
+            centerOffsetX: "-3%",
             editable: [{
                 name: "neckLength",
                 type: "Integer",
                 min: 0,
                 max: 100,
-                value: 50,
+                value: 70,
                 size: 3,
                 description: "Make the giraffeâ€™s neck long or short: type from 1 to 100"
             }, {
@@ -4202,7 +4193,7 @@ updateProperties: function(editable) {
                 type: "Integer",
                 min: 0,
                 max: 100,
-                value: 100,
+                value: 10,
                 size: 3,
                 description: "Change the length of the giraffe's legs: type any number from 0 to 100."
             }, {
@@ -4210,7 +4201,7 @@ updateProperties: function(editable) {
                 type: "Integer",
                 min: 1,
                 max: 100,
-                value: 100,
+                value: 10,
                 size: 3,
                 description: "Speed up or slow down the giraffe: choose from 1 to 100."
             }]
@@ -4218,8 +4209,8 @@ updateProperties: function(editable) {
             id: "PencilMan",
             name: "LittlePencil",
             viewClass: "PencilManPlaythingView",
-            enabled: !1,
-            mobileEnabled: !1,
+            enabled: !0,
+            mobileEnabled: !0,
             androidMobile: !1,
             zIndex: "20",
             centerOffsetX: "-3%",

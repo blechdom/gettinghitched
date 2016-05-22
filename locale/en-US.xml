@@ -1,11 +1,11 @@
 <dictionary>
-<url>http://kevyb.com/gettinghitched</url>
+<url>http://www.kevyb.com/gettinghitched</url>
 <share>
 <text>
-
+You are invited to Kristin and Matthew's wedding party!
 </text>
-<facebook>https://www.facebook.com/sharer/sharer.php?</facebook>
-<twitter>https://twitter.com/share?</twitter>
+<facebook></facebook>
+<twitter></twitter>
 </share>
 <ui>
 <label_close>
@@ -15,31 +15,31 @@
 <cookie>
 <body>
 <![CDATA[
-We can put more information here, but it only happens when people need to accept cookies. <button class="cookie__btn-accept">close</button>
+We use cookies to give you the best possible experience on our website. Our cookies don't collect personal information. Click the <button class="cookie__btn-more">cookie</button> to read more and how to manage your cookie settings. <button class="cookie__btn-accept">close</button>
 ]]>
 </body>
 </cookie>
 <loader>
 <label_loading>
-<![CDATA[ > coding < ]]>
+<![CDATA[ PARTY!!! ]]>
 </label_loading>
 </loader>
 <intro>
 <text>
 <![CDATA[
-<span class="intro__text intro__text--pink">You are<br/></span><span class="intro__text intro__text--blue">>totally<br/>>invited<br/>>to the wedding of<br/></span><span class="intro__text intro__text--green">>^1000<br/>><br/>><br/></span><span class="intro__text intro__text--green">>Kristin Erickson<br/>>and<br/>>Matthew Galvin</span>
+<span class="intro__text intro__text--blue">Friends and Family!!!<br></span><span class="intro__text intro__text--pink">You are invited...<br/></span><span class="intro__text intro__text--green">^1000<br/></span><span class="intro__text intro__text--green">to Kristin and Matthew's<br/>wedding<br>clambake<br>dance party!!!!</span>
 ]]>
 </text>
 </intro>
 <editor>
 <label_function>
-<![CDATA[ var __playthingName__ =function(){ ]]>
+<![CDATA[ Information ]]>
 </label_function>
 <label_apply>
-<![CDATA[ > apply < ]]>
+<![CDATA[ YEP! ]]>
 </label_apply>
 <label_reset>
-<![CDATA[ > reset < ]]>
+<![CDATA[ Begin Again? ]]>
 </label_reset>
 <label_bracket>
 <![CDATA[ } ]]>
@@ -47,67 +47,80 @@ We can put more information here, but it only happens when people need to accept
 </editor>
 <reset>
 <label_heading>
-<![CDATA[ Are you sure you want to reset? ]]>
+<![CDATA[ Begin again? ]]>
 </label_heading>
 <label_cancel>
-<![CDATA[ > cancel < ]]>
+<![CDATA[ Nope! ]]>
 </label_cancel>
 <label_reset>
-<![CDATA[ > reset < ]]>
+<![CDATA[ Yup! ]]>
 </label_reset>
 </reset>
 <info>
 <booking_url>
-<![CDATA[ http://www.barclays.co.uk/codeplayground ]]>
+<![CDATA[ http://www.kevyb.com/gettinghitched ]]>
 </booking_url>
 <section>
-<title>Barclays and coding</title>
+<title> Who?</title>
 <in_nav>true</in_nav>
 <id>1</id>
 <body>
 <![CDATA[
-<p> <span class="pink"><span aria-hidden="true">&gt;Coding*s</span><span class="ro">Coding's</span> going to be<br/> <span aria-hidden="true">t@king</span><span class="ro">taking</span> us all <span aria-hidden="true">somew#ere</span><span class="ro">somewhere</span> new.</span> </p> <p class="shifted"> <span class="lightgreen">And the people <span aria-hidden="true">who*ll</span><span class="ro">who'll</span> be taking us there<br/> are the kids of <span aria-hidden="true">tod@y.</span><span class="ro">today</span></span> </p> <p> <span class="blue">Which is <span aria-hidden="true">w#y</span><span class="ro">why</span>, with our trained Digital Eagles,<br/> <span aria-hidden="true">we*re</span><span class="ro">we're</span> encouraging as <span aria-hidden="true">m@ny</span><span class="ro">many</span> young people<br/> <span class="unshifted">as possible to have a go.</span></span> </p> <p> <span class="orange"><span aria-hidden="true">&gt;</span>Explore it.<br/> Get to know it,<br/> <span class="shifted"><span aria-hidden="true">H@ve</span><span class="ro">Have</span> fun with it.</span></span> </p> <p> <span class="blue"><span aria-hidden="true">&lt;</span>After all, <span aria-hidden="true">they*ll</span><span class="ro">they'll</span> be the ones<br/> writing <span aria-hidden="true">t#e</span><span class="ro">the</span> code of the future.</span> </p> <p> <span class="pink"><span aria-hidden="true">&gt;</span>Help <span aria-hidden="true">t#em</span><span class="ro">them</span> learn the new language<br/> for a new economy.</span> </p> <p><img src="images/logo-barclays.jpg" alt="Barclays logo"/></p>
+<p><span class="pink">Kristin Grace Erickson and Matthew Patrick Galvin...</span></p><p><img src="images/weddingpic2.jpg" width=500/></p>
 ]]>
 </body>
 </section>
 <section>
-<title>Book a session</title>
+<title> What?</title>
 <in_nav>true</in_nav>
 <id>2</id>
 <body>
 <![CDATA[
-<p> <a class="beige-box" href="http://www.barclays.co.uk/codeplayground" target="_blank" data-event-id="Book_session"> Book a session now<br/> in a branch near you> </a> </p> <p> <span class="blue"><span aria-hidden="true">&gt;</span>If you*re aged 7- 17<br/> and enjoyed Barclays Code Playground,<br/> we’d love you to</span><br/> <span class="lightgreen">come along to a<br/> coding session in branch.</span> </p> <p> <span class="pink"><span aria-hidden="true">&lt;There*ll</span><span class="ro">There'll</span> be tips,<br/> <span aria-hidden="true">ch@llenges</span><span class="ro">challenges</span><br/> and many more things to code.</span> </p> <p> <span class="orange"><span aria-hidden="true">&gt;</span>Our trained Digital Eagles<br/> will be there</span><br/> <span class="lightgreen">to help you take your<br/> coding skills<br/> <span class="unshifted">&lt;to the next level.</span></span> </p>
+<span class="blue">...are getting married and want to celebrate with you! </span><br><br>
+<span class="green">Please dress for a casual outdoor garden party featuring croquet, rowdy kids, team trivia, live music, dancing, cake, and cocktail-style Cape Cod cuisine.</span><br><br>
+<span class="orange">The party will be at the Galvin family compound in Cotuit, Cape Cod.</span><br><br>
+<p><img src="images/cotuitHouse.jpg" width=500/></p>
+
+
 ]]>
 </body>
 </section>
 <section>
-<title>Watch films</title>
+<title> When?</title>
 <in_nav>true</in_nav>
 <id>3</id>
 <body>
 <![CDATA[
-<div class="info__films--desktop"> <p><span class="blue">&gt;Learn more about how we’re getting kids coding. Click a thumbnail to watch a short film.</span></p> <div class="info__tv"> <div id="player" class="info__player"></div> </div> <ul class="info__playlist"> <li class="info__playlist-item" data-video-id="Ii6-KTBFv2E"><div class="info__playlist-img"></div></li> <li class="info__playlist-item" data-video-id="epBkLhhVJQc"><div class="info__playlist-img"></div></li> <li class="info__playlist-item" data-video-id="Rtbh8J0jVNY"><div class="info__playlist-img"></div></li> <li class="info__playlist-item" data-video-id="vratkGTLc_M"><div class="info__playlist-img"></div></li> <li class="info__playlist-item" data-video-id="Zz-6HV06DyY"><div class="info__playlist-img"></div></li> <li class="info__playlist-item" data-video-id="-iWQnRIJZic"><div class="info__playlist-img"></div></li> <li class="info__playlist-item" data-video-id="qySXBq_XYpI"><div class="info__playlist-img"></div></li> </ul> </div> <div class="info__films--mobile"> <p><span class="blue">&gt;Learn more about how we’re getting kids coding.</span></p> <div class="videoWrapper"> <iframe width="560" height="315" src="//www.youtube.com/embed/Ii6-KTBFv2E?showinfo=0&modestbranding=1&rel=0&autohide=1" frameborder="0" allowfullscreen></iframe> </div> <div class="videoWrapper"> <iframe width="560" height="315" src="//www.youtube.com/embed/epBkLhhVJQc?showinfo=0&modestbranding=1&rel=0&autohide=1" frameborder="0" allowfullscreen></iframe> </div> <div class="videoWrapper"> <iframe width="560" height="315" src="//www.youtube.com/embed/Rtbh8J0jVNY?showinfo=0&modestbranding=1&rel=0&autohide=1" frameborder="0" allowfullscreen></iframe> </div> <div class="videoWrapper"> <iframe width="560" height="315" src="//www.youtube.com/embed/vratkGTLc_M?showinfo=0&modestbranding=1&rel=0&autohide=1" frameborder="0" allowfullscreen></iframe> </div> <div class="videoWrapper"> <iframe width="560" height="315" src="//www.youtube.com/embed/Zz-6HV06DyY?showinfo=0&modestbranding=1&rel=0&autohide=1" frameborder="0" allowfullscreen></iframe> </div> <div class="videoWrapper"> <iframe width="560" height="315" src="//www.youtube.com/embed/-iWQnRIJZic?showinfo=0&modestbranding=1&rel=0&autohide=1" frameborder="0" allowfullscreen></iframe> </div> </div>
+<span class="orange">The party will be on Thursday, July 28th, 2016 at 3pm.</span><br><br>
+<span class="green">It'll be high season on the Cape, so please make your arrangements soon.</span><br><br>
+<span class="pink">The following websites may be helpful for finding accommodations:</span><br><br>
+<p><ul>
+		<li class="blue"><u><a href="http://www.thesantuitinn.com/" class="blue">The Santuit Inn</a></u></span><br><br></li>
+		<li><span class="orange"><u><a href="http://www.seamistcapecod.com/" class="orange">Sea Mist Resort, Cape Cod</a></u></span><br><br></li>
+		<li><span class="green"><u><a href="http://www.vrbo.com/" class="green">VRBO.com - Vacation Rentals By Owner</a></u></span><br><br></li>
+		<li><span class="pink"><u><a href="http://www.airbnb.com/" class="pink">airbnb.com</a></u></span></li>
+</ul></p>
 ]]>
 </body>
 </section>
 <section>
-<title>Further learning</title>
+<title> Where?</title>
 <in_nav>true</in_nav>
 <id>4</id>
 <body>
 <![CDATA[
-<p><span class="blue"><span aria-hidden="true">&gt;</span>Want to learn more? Have a look at some of our recommended sites and partners. </span></p> <ul class="info__partners-list"> <li class="info__partners-list-item lightgreen"><div class="info__partners-list-img"><img src="images/logo-scratch.png" alt="Scratch logo"/></div><p class="info__partners-list-copy"><span aria-hidden="true">&gt;</span>Scratch is a free programming software where you can create your own interactive animations and games. Click on the link to code more things. <a href="http://scratch.mit.edu" target="_blank" data-event-id="scratch" aria-label="scratch.mit.edu"><span aria-hidden="true">&gt;</span>scratch.mit.edu</a></p></li> <li class="info__partners-list-item orange"><div class="info__partners-list-img"><img src="images/logo-coder-dojo.jpg" alt="Coder Dojo logo"/></div><p class="info__partners-list-copy"><span aria-hidden="true">&gt;</span>CoderDojo is a global network of community based programming clubs for 7 – 17 year olds. Learn how to code, develop websites, apps, programs, games and explore technology. Click on the link to find a Dojo near you.<a href="https://coderdojo.com/" target="_blank" data-event-id="coder_dojo"><span aria-hidden="true">&gt;</span>coderdojo.com</a></p></li> <li class="info__partners-list-item pink"><div class="info__partners-list-img"><img src="images/logo-code-club.jpg" alt="Code Club logo"/></div><p class="info__partners-list-copy"><span aria-hidden="true">&gt;</span>Code Club is a network of over 2000 volunteer led, weekly, after school coding clubs in the UK. Click on the link to find a club near you.<a href="http://www.codeclub.org.uk" target="_blank" data-event-id="code-club"><span aria-hidden="true">&gt;</span>www.codeclub.org.uk</a></p></li> <li class="info__partners-list-item lightgreen"><div class="info__partners-list-img"><img src="images/logo-my-kidsy.png" alt="MyKidsy logo"/></div><p class="info__partners-list-copy"><span aria-hidden="true">&gt;</span>MyKidsy is a directory of London-based innovative and educational activities for children to help unlock their hidden talents and creativity. Click on the link to find an after school club near you. <a href="http://www.mykidsy.com" target="_blank" data-event-id="my_kidsy"><span aria-hidden="true">&gt;</span>www.mykidsy.com</a></p></li> <li class="info__partners-list-item blue"><div class="info__partners-list-img"><img src="images/logo-young-rewired-state.jpg" alt="Young Rewired State logo"/></div><p class="info__partners-list-copy"><span aria-hidden="true">&gt;</span>Young Rewired State is a young team of coders who attend events around the world and use their digital skills to build prototypes, complete challenges and meet others who share their interests. Click on the link to find out more. <a href="http://www.yrs.io" target="_blank" data-event-id="young_rewired_state"><span aria-hidden="true">&gt;</span>www.yrs.io</a></p></li> <li class="info__partners-list-item pink"><div class="info__partners-list-img"><img src="images/logo-apps-for-good.jpg" alt="Apps for Good logo"/></div><p class="info__partners-list-copy"><span aria-hidden="true">&gt;</span>Apps for Good is a technology education movement where 10 – 18 year olds learn to create apps that change their world. Click on the link to find out more <a href="http://www.appsforgood.org" target="_blank" data-event-id="apps_for_good"><span aria-hidden="true">&gt;</span>www.appsforgood.org</a></p></li> <li class="info__partners-list-item orange"><div class="info__partners-list-img"><img src="images/logo-free-formers.jpg" alt="Free Formers logo"/></div><p class="info__partners-list-copy"><span aria-hidden="true">&gt;</span>Free:Formers helps companies drive digital transformation through programmes that teach relevant and practical skills to anyone from frontline staff all the way up to senior leadership teams. Click on the link to find out more.<a href="http://www.freeformers.com" target="_blank"><span aria-hidden="true">&gt;</span>www.freeformers.com</a></p></li> <li class="info__partners-list-item pink"><div class="info__partners-list-img"><img src="images/logo-fuze.png" alt="FUZE logo"/></div><p class="info__partners-list-copy"><span aria-hidden="true">&gt;</span>FUZE Technologies supports schools in meeting the requirements of the new National Curriculum for computing, offering a computing platform that helps make learning text based programming as easy and accessible as possible. Click on the link to learn more. <a href="http://www.fuze.co.uk/" target="_blank" data-event-id="fuze_technologies"><span aria-hidden="true">&gt;</span>www.fuze.co.uk</a></p></li> <li class="info__partners-list-item blue"><div class="info__partners-list-img"><img src="images/logo-barclays.jpg" alt="Barclays logo"/></div><p class="info__partners-list-copy"><span aria-hidden="true">&gt;</span>The Barclays Digital Driving Licence will help you to become more digitally savvy and keep up to date with technology. We have joined forces/partnered with companies such as Microsoft and IBM to create a fun interactive learning experience. Download the free app today via the App Store or Google Play store or join in via the website<a href="https://www.digitaldrivinglicence.barclays.com" target="_blank" data-event-id="digital_driving_licence"><span aria-hidden="true">&gt;</span>digitaldrivinglicence.barclays.com</a></p></li> </ul>
+<p><span class="green">1698 Santuit-Newtown Rd, Barnstable, MA 02635</span></p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2981.837952816737!2d-70.44784268468341!3d41.637633988407245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e4cd59a45000eb%3A0x678a2eed6fa41165!2s1698+Santuit-Newtown+Rd%2C+Barnstable%2C+MA+02635!5e0!3m2!1sen!2sus!4v1463879749118" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 ]]>
 </body>
 </section>
 <section>
-<title>Cookie Policy</title>
-<in_nav>false</in_nav>
+<title> R.S.V.P.</title>
+<in_nav>true</in_nav>
 <id>5</id>
 <color>green</color>
 <body>
 <![CDATA[
-<h1 class="pink"><span aria-hidden="true">&gt;</span>Cookie Policy: </h1> <p class="blue">We may collect information about your computer, including your IP address, operating system and browser type, for system administration and in order to create reports. This is statistical data about our users’ browsing actions and patterns, and does not identify any individual. </p> <p class="lightgreen shifted">The only cookies in use on our site are for <b>Google Analytics</b>. Google Analytics is a web analytics tool that helps website owners understand how visitors engage with their website. Google Analytics customers can view a variety of reports about how visitors interact with their website so that they can improve it. </p> <p class="blue shifted">Like many services, Google Analytics uses first-party cookies to track visitor interactions as in our case, where they are used to collect information about how visitors use our site. We then use the information to compile reports and to help us improve our site. </p> <p class="lightgreen shifted">Cookies contain information that is transferred to your computer’s hard drive. These cookies are used to store information, such as the time that the current visit occurred, whether the visitor has been to the site before and what site referred the visitor to the web page. </p> <p class="blue shifted">Google Analytics collects information anonymously. It reports website trends without identifying individual visitors. You can opt out of Google Analytics without affecting how you visit our site – for more information on opting out of being tracked by Google Analytics across all websites you use, visit this <a href="http://tools.google.com/dlpage/gaoptout" target="_blank" class="blue">Google page</a>.</p> <p><img src="images/logo-barclays.jpg" alt="Barclays logo"/></p>
+<iframe src="https://docs.google.com/forms/d/1KX96IpoZLjRWjooLjC9sYJgKYZHxwpKUfkAhSTkV9Ug/viewform?embedded=true" width="550" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 ]]>
 </body>
 </section>
