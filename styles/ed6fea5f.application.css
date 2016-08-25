@@ -32,6 +32,13 @@ p, .c-p { font-size: 20px; line-height: 22px; font-size: 2rem; line-height: 2.2r
 @media (min-width: 767px) { p, .c-p { font-size: 22px; line-height: 24px; font-size: 2.2rem; line-height: 2.4rem; } }
 .no-mqs p, .no-mqs .c-p { font-size: 22px; line-height: 24px; font-size: 2.2rem; line-height: 2.4rem; }
 
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
 .c-center { text-align: center; }
 
 .c-condense { font-size: 85%; }

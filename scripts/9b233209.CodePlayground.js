@@ -1,4 +1,5 @@
 /*! BBH London */ ! function(modules) {
+
     function __webpack_require__(moduleId) {
         if (installedModules[moduleId]) return installedModules[moduleId].exports;
         var module = installedModules[moduleId] = {
@@ -80,6 +81,7 @@
                     this.ready(function() {
                         this.dispatcher.dispatch(codeplayground.events.CHANGE_STATE, "preload")
                     }.bind(this))
+                   
                 }
             }), new codeplayground.CodePlayground(document)
         }(window.codeplayground = window.codeplayground || {}, soma), ("undefined" == typeof window.console || "undefined" == typeof window.console.log) && (window.console = {
@@ -1155,7 +1157,14 @@
         };
         IntroView.prototype.initView = function() {
             this.scope.introText = "", this.template.render()
+            console.log("in typewrite?");
+           
+    if(!window.location.hash) {
+        window.location = window.location + '#loaded';
+        window.location.reload();
+    }
         }, IntroView.prototype.introIn = function() {
+            
             var viewed = !!this.cookieModel.readCookie("cp_viewed") && !this.configModel.skipIntro;
             this.cookieModel.createCookie("cp_viewed", 1, 30), this.typewrite(this.introText, 0, viewed)
         }, IntroView.prototype.introOut = function() {
@@ -1172,6 +1181,8 @@
                 }.bind(this)
             })
         }, IntroView.prototype.typewrite = function(str, characterIndex, skipIn) {
+      
+
             str = str.replace(/ +/g, " ").replace(/(\n ?)+/g, "");
             var $introText = this.element.querySelector(".intro__inner");
             skipIn && (characterIndex = Math.max(0, str.indexOf("^") - 1));
